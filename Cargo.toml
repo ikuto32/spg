@@ -1,0 +1,31 @@
+[package]
+name = "spg"
+description = "Reference implementation of SPG (Shogi Position Graph) v1.0: .spg binary containers, .spgt text, .spgm manifests"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+authors = ["Sakiyomi contributors"]
+repository = "https://github.com/ikuto32/spg"
+readme = "README.md"
+keywords = ["shogi", "opening-book", "kifu", "file-format"]
+categories = ["encoding", "parser-implementations", "games"]
+# The specification's text (spec/SPG-v1.0.md) ships with the crate; the typeset PDF does not.
+exclude = ["spec/*.pdf"]
+
+[dependencies]
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+blake3 = { version = "1", default-features = false, features = ["std", "pure"] }
+ed25519-dalek = { version = "2", default-features = false, features = ["std", "fast"] }
+ruzstd = "0.8"
+
+[dev-dependencies]
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "warn"
+expect_used = "warn"
+panic = "warn"

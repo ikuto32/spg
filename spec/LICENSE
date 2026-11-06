@@ -1,0 +1,11 @@
+SPG (Shogi Position Graph) フォーマット仕様 v1.0 / Format Specification v1.0
+Copyright (c) 2026 @ikuto
+
+The specification in this folder (SPG-v1.0.md and SPG-v1.0.pdf) is licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/
+
+SPDX-License-Identifier: CC-BY-4.0
+
+The reference implementation (the Rust source code outside this folder) is licensed
+separately under the MIT License.
